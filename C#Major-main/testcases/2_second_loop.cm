@@ -1,0 +1,7 @@
+TEMPO 120;
+INSTRUMENT Piano;
+
+PLAY C4 quarter;
+PLAY D4 quarter;
+PLAY E4 quarter;
+PLAY G4 quarter;

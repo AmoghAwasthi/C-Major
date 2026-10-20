@@ -1,8 +1,8 @@
-# SymphonyLang
+# C Major
 
 **A domain-specific compiler that turns a custom programming language into real, playable music.**
 
-SymphonyLang is a full compiler — lexer, parser, semantic analyzer, intermediate representation, optimizer, and **two independent code generation backends** — built from scratch in Python. Instead of compiling to machine code, SymphonyLang compiles to **music**: a `.mid` file (via a MIDI backend) or a custom stack-based bytecode (via a hand-built VM). The two backends are verified to always agree, and a graph-coloring channel allocator assigns MIDI channels the same way real compilers assign CPU registers.
+C Major is a full compiler — lexer, parser, semantic analyzer, intermediate representation, optimizer, and **two independent code generation backends** — built from scratch in Python. Instead of compiling to machine code, C Major compiles to **music**: a `.mid` file (via a MIDI backend) or a custom stack-based bytecode (via a hand-built VM). The two backends are verified to always agree, and a graph-coloring channel allocator assigns MIDI channels the same way real compilers assign CPU registers.
 
 > This project treats music purely as the *output domain*. Every classical compiler phase — lexical analysis, parsing with error recovery, scoped semantic analysis, three-address IR, multi-pass optimization, and dual-target code generation — is implemented in full.
 
@@ -10,14 +10,14 @@ SymphonyLang is a full compiler — lexer, parser, semantic analyzer, intermedia
 
 ## Why this project exists
 
-Most student compiler projects stop at "lexer + parser for a toy calculator language." SymphonyLang instead implements a **complete language** with variables, expressions, control flow, functions with parameters and scope, and two full compilation targets — while staying easy to demo, since the output is something anyone can *hear*.
+Most student compiler projects stop at "lexer + parser for a toy calculator language." C Major instead implements a **complete language** with variables, expressions, control flow, functions with parameters and scope, and two full compilation targets — while staying easy to demo, since the output is something anyone can *hear*.
 
 ---
 
 ## Pipeline Overview
 
 ```
-SymphonyLang source (.sym)
+C Major source (.cm)
         │
         ▼
    ┌─────────┐
@@ -105,7 +105,7 @@ ENDPARALLEL
 ## Project Structure
 
 ```
-SymphonyLang/
+C Major/
 ├── backend/
 │   ├── tokens.py              # Token type definitions
 │   ├── lexer.py                # Stage 1: text -> tokens
@@ -123,7 +123,7 @@ SymphonyLang/
 ├── grammar/
 │   └── grammar.ebnf              # Formal language grammar
 ├── testcases/
-│   └── *.sym                     # Sample programs
+│   └── *.cm                     # Sample programs
 ├── docs/                          # Architecture notes, report material
 └── frontend/                      # (planned) editor + pipeline visualizer UI
 ```
@@ -190,7 +190,7 @@ Each module also works as an importable component — see `compare_backends.py` 
 
 ## Roadmap
 
-- **Natural-language front-end**: a fine-tuned LLM translating plain-English music descriptions into SymphonyLang, with a compiler-feedback retry loop (compilation errors are fed back to the model for automatic correction).
+- **Natural-language front-end**: a fine-tuned LLM translating plain-English music descriptions into C Major, with a compiler-feedback retry loop (compilation errors are fed back to the model for automatic correction).
 - **Frontend UI**: an in-browser editor with a step-by-step visualizer for every compiler phase, plus in-browser MIDI playback.
 - **Wiring the channel allocator into MIDI codegen** so `PARALLEL` tracks are actually emitted on their assigned channels in the final `.mid` output.
 

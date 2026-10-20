@@ -210,7 +210,7 @@ if __name__ == "__main__":
     from optimizer import constant_folding, constant_propagation, dead_code_elimination
     from bytecode_compiler import BytecodeCompiler, print_bytecode
 
-    sample = open("../testcases/demo_sample.sym").read()
+    sample = open("../testcases/demo_sample.cm").read()
 
     tokens, _ = Lexer(sample).tokenize()
     ast, parse_errors = Parser(tokens).parse()

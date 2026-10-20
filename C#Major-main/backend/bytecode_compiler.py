@@ -165,7 +165,7 @@ if __name__ == "__main__":
     from ir import IRGenerator, print_ir
     from optimizer import constant_folding, constant_propagation, dead_code_elimination
 
-    sample = open("../testcases/demo_sample.sym").read()
+    sample = open("../testcases/demo_sample.cm").read()
 
     tokens, _ = Lexer(sample).tokenize()
     ast, parse_errors = Parser(tokens).parse()

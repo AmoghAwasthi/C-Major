@@ -1,6 +1,6 @@
 """
 tokens.py
-Defines Token and TokenType for SymphonyLang's lexer.
+Defines Token and TokenType for C Major's lexer.
 """
 
 from enum import Enum, auto

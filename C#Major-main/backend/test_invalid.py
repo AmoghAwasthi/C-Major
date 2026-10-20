@@ -57,7 +57,7 @@ def check_invalid(path):
 
 
 def main():
-    paths = sorted(glob.glob("../testcases/invalid/*.sym"))
+    paths = sorted(glob.glob("../testcases/invalid/*.cm"))
 
     if not paths:
         print("No invalid test files found.")

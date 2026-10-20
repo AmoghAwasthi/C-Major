@@ -1,4 +1,4 @@
-SymphonyLang - Formal Grammar (EBNF)
+C Major - Formal Grammar (EBNF)
 ======================================
 
 program        := statement* ;

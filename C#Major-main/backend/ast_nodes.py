@@ -1,6 +1,6 @@
 """
 ast_nodes.py
-Defines the AST (Abstract Syntax Tree) node types for SymphonyLang.
+Defines the AST (Abstract Syntax Tree) node types for C Major.
 
 These are simple data-holding classes - no logic here, just shapes
 that represent each piece of a program. The Parser builds these,

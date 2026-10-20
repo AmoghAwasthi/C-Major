@@ -564,7 +564,7 @@ def generate_program():
 
 def build_instruction(descriptions):
     return (
-        "Create a SymphonyLang music program: "
+        "Create a music program: "
         + " ".join(descriptions)
     )
 

@@ -1,6 +1,6 @@
 """
 parser.py
-Hand-written recursive-descent parser for SymphonyLang.
+Hand-written recursive-descent parser for C Major.
 
 Takes the token list from the Lexer and builds an AST (see ast_nodes.py).
 Uses panic-mode error recovery: on a syntax error, it reports the error

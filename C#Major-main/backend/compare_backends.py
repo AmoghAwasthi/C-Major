@@ -1,6 +1,6 @@
 """
 compare_backends.py
-Cross-validation test: compiles a SymphonyLang program, runs it through
+Cross-validation test: compiles a C Major program, runs it through
 BOTH backends (MIDI code generator AND bytecode VM), and checks that they
 agree on what music was actually produced.
 
@@ -170,7 +170,7 @@ def compare(source_code, label=""):
 if __name__ == "__main__":
     import sys
 
-    path = sys.argv[1] if len(sys.argv) > 1 else "../testcases/demo_sample.sym"
+    path = sys.argv[1] if len(sys.argv) > 1 else "../testcases/demo_sample.cm"
 
     with open(path) as f:
         sample = f.read()

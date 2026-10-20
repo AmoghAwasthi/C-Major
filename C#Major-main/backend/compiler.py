@@ -115,7 +115,7 @@ def compile_file(source_path, output_path="output.mid"):
 def main():
     if len(sys.argv) < 2:
         print("Usage:")
-        print("  python3 compiler.py <source.sym> [output.mid]")
+        print("  python3 compiler.py <source.cm> [output.mid]")
         return 1
 
     source_path = sys.argv[1]

@@ -1,6 +1,6 @@
 """
 lexer.py
-Hand-written lexer (tokenizer) for SymphonyLang.
+Hand-written lexer (tokenizer) for C Major.
 
 Converts raw source text into a stream of Token objects.
 Reports lexical errors with line/column info instead of crashing,
